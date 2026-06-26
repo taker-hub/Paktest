@@ -133,7 +133,31 @@ export default function App() {
         </div>
 
         {/* Tab Content Renderer with Animation Wrapper */}
-        <div className="flex-1">
+        <div className="flex-1 space-y-6">
+          {/* Important Camouflage Alert Banner */}
+          <div className="bg-amber-500/10 border-2 border-amber-500/30 rounded-3xl p-5 text-right relative overflow-hidden flex flex-col md:flex-row-reverse items-center justify-between gap-4 animate-fade-in">
+            <div className="absolute top-0 left-0 w-24 h-24 bg-amber-500/5 rounded-br-full pointer-events-none"></div>
+            <div className="flex items-start gap-4 flex-row-reverse text-right">
+              <span className="text-2xl mt-1 select-none">🛡️</span>
+              <div className="space-y-1">
+                <h4 className="font-black text-sm text-amber-800 dark:text-amber-400">توجه بسیار مهم امنیتی: سیستم استتار (Camouflage) فعال است!</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+                  آدرس اصلی ورکر شما به طور هوشمند و عمدی سایت‌های مرجع مانند <strong>اوبونتو (Ubuntu)</strong> یا <strong>داکر (Docker)</strong> را نشان می‌دهد تا توسط سیستم‌های فیلترینگ شناسایی نشود. برای ورود به پنل مدیریت مخفی خود، باید عبارت <code className="font-mono text-rose-500 bg-amber-500/5 px-1.5 py-0.5 rounded text-[11px] font-bold">/sync/dash</code> را به انتهای آدرس ورکر خود اضافه کنید.
+                </p>
+              </div>
+            </div>
+            <div className="shrink-0 w-full md:w-auto">
+              <a 
+                href="https://long-shape-dbd8.hectorhastam1.workers.dev/sync/dash" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-full md:w-auto inline-flex justify-center px-4 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-black rounded-2xl text-xs transition shadow-md shadow-amber-600/10"
+              >
+                ورود مستقیم به پنل شما &larr;
+              </a>
+            </div>
+          </div>
+
           {activeTab === 'compiler' && <ObfuscatorWorkspace />}
           {activeTab === 'setup' && <SetupGuide />}
           {activeTab === 'playground' && <SubscriptionPlayground />}
