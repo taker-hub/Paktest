@@ -1,0 +1,6 @@
+{
+  "name": "Nahan Gateway Compiler & Obfuscator",
+  "description": "A comprehensive interactive guide, custom configuration builder, and code obfuscator workspace for the Nahan serverless subscription gateway on Cloudflare Workers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
